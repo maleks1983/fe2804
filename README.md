@@ -16,6 +16,8 @@ https://www.figma.com/file/ncfUi5NMZKAblmoavnUCNG/ThriveTalk-Landing-Page-(Copy)
 * Valorant
 * Chat
 * Increase your productivity
+http://github.com - automatic!
+[GitHub](http://github.com)
 
 ## Дополнительно
 * 6 Creative Website Menu Design Examples You Need to Copy
