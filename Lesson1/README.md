@@ -1,8 +1,8 @@
-# WebAcademy fe2804Homework
+# WebAcademy fe2804 Homework
 
 ## Уроки
 ### [Lesson 1](Lesson1\README.md)
-*[Personas](https://maleks1983.github.io/fe2804/)
+#### [Personas](https://maleks1983.github.io/fe2804/)
 
 ## Простые макеты для тренировки верстки
 * [ThriveTalk](https://www.figma.com/file/ncfUi5NMZKAblmoavnUCNG/ThriveTalk-Landing-Page-(Copy))
