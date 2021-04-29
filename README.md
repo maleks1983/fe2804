@@ -1,7 +1,7 @@
 # WebAcademy fe2804 Homework
 
 ## Уроки
-### [Lesson 1](Lesson1\README.md)
+### [Lesson 1](Lesson1/README.md)
 
 
 ## Простые макеты для тренировки верстки
