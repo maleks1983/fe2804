@@ -1,10 +1,11 @@
 # WebAcademy fe2804 Homework
 
 ## Уроки
-### [Lesson 1](Lesson1/README.md)
 
+* [Lesson 1](Lesson1/README.md)
 
 ## Простые макеты для тренировки верстки
+
 * [ThriveTalk](https://www.figma.com/file/ncfUi5NMZKAblmoavnUCNG/ThriveTalk-Landing-Page-(Copy))
 * [BuhOne](https://www.figma.com/file/H25MCLDxyXi2HeqjYcsxsR/Templates-%236.-More-on-Figma.info-(Copy))
 * [Denis Novik](https://www.figma.com/file/FFdUU4n0piY6LqljTbbpoz/Free--Landing--Page-Template-(Copy))
@@ -18,6 +19,7 @@
 * [Increase your productivity](https://www.figma.com/file/2nC8dtRH5iVzZXxzNuJtZP/clean_and_simple_website_freebie_work_file-(Copy))
 
 ## Дополнительно
+
 * [6 Creative Website Menu Design Examples You Need to Copy](https://www.lean-labs.com/blog/website-menu-design-examples)
 * [Шаблоны](https://figma.info/)
 * [Телеграмм канал с шаблонами](https://t.me/figma2html)
