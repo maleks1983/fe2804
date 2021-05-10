@@ -1,90 +1,141 @@
+
+@font-face {
+    font-family: 'Bw Modelica';
+    src        : local('Bw Modelica Extra Bold'), local('Bw-Modelica-Extra-Bold'),
+        url('BwModelicaSS01-ExtraBold.otf');
+    font-style: ExtraBold;
+}
+@font-face {
+    font-family: 'Bw Modelica';
+    src: local('Bw Modelica Bold'), local('Bw-Modelica-Bold'),
+        url('BwModelicaCyrillicDEMO-Bold.ttf');
+    font-style: bold;
+  }
 body{
-    position: relative;
-    width: 900px;
-    height: 612px;
-    background: #FFFFFF;
+    background-color: #E5E5E5;
 }
-
-.adult_backpack_city{
-    position: absolute;
-    width: 828px;
-    height: 612px;
-    left: -249px;
-    top: 0px;
-    background-image: url("adult-backpack-city-84545.png")
-    
-}
-body h2{
-    margin: 0.5rem;
-    font-family: Audi Type;
-}
-
-body h4{
-    
-    margin: 0.2rem;
+h1 {
     font-family: Bw Modelica;
-
-    
-}
-body h3{
-    margin: 0.3rem;
-    font-family: Arial, Helvetica, sans-serif;
-
-    
-}
-body h6{
-    margin: 0rem;
-    font-family: Arial, Helvetica, sans-serif;
-
-    
+    font-size  : 30px;
+    line-height: 36px;
+    font-weight: 800;
+    font-style : ExtraBold;
 }
 
+p {
 
-.Rectangle_1{
-    position: absolute;
-    width: 632px;
-    height: 113px;
-    left: 268px;
-    top: 0px;
-    background: #ffffff;
-    
-}
-.Rectangle_1 li{
-    list-style-type: none
+    font-family: Arial;
+    font-size  : 13px;
+    line-height: 15px;
+    font-style : Regular;
+
 }
 
-.Rectangle_1 h3{
+h3 {
+    font-family: Arial;
+    font-size  : 18px;
+    line-height: 21px;
+    color      : #000000;
+}
+
+h3,
+p,
+h1 {
+    margin: 0;
+
+}
+
+.percona {
+    max-width       : 900px;
+    max-height      : 612px;
+    display         : flex;
+    margin          : 0;
+    background-color: #FFFFFF;
+}
+
+
+.Rectangle_1 {
+    flex: 1 1 70%;
+}
+
+.Rectangle_1>section {
+    margin : 0;
+    padding: 32px 0 39px 82px;
+}
+
+.Rectangle_1 section h3:last-child {
     color: #666666;
 }
 
-.Rectangle_3{
-    position: absolute;
-    width: 270px;
-    height: 125px;
-    left: 0px;
-    top: 487px;
-    color: #F9F9F9;
+.Rectangle_2 {
+    position  : absolute;
+    margin    : 0;
+    max-width : 113px;
+    max-height: 44px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Rectangle_2>h2 {
+    margin: 7px 14px;
+
+}
+
+.Rectangle_3 {
+
+    background-image: url("adult-backpack-city-845457.png");
+    flex            : 0 0 30%;
+}
+
+.Rectangle_3>section {
+    margin-top    : 487px;
+    padding-top   : 15px;
+    padding-left  : 16px;
+    padding-bottom: 16px;
+    color         : #FFFFFF;
+}
+
+.Rectangle_3 h1 {
+    margin-bottom: 16px;
+}
+
+.Rectangle_3 p {
+    margin     : 8px 0 8px 0;
     font-family: Bw Modelica;
-
-
-}
-.Rectangle_4{
-    position: absolute;
-    width: 632px;
-    height: 499px;
-    left: 268px;
-    top: 113px;
-    background: #F9F9F9;
+    font-size  : 12px;
+    line-height: 17px;
+    font-style : bold;
 }
 
-.Rectangle_2{
-    position: absolute;
-    width: 113px;
-    height: 44px;
-    left: 787px;
-    top: 568px;
-    border-width: 10px;
-    text-align: center;
+.Rectangle_4 {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : flex-end;
+    align-items     : flex-end;
+    height          : 100%;
+    max-width       : 632px;
+    max-height      : 499px;
     background-color: #F9F9F9;
-    box-shadow: -1px -0px 1px grey;
+
+}
+
+.Rectangle_4>section {
+    padding-left : 82px;
+    padding-top  : 36px;
+    padding-right: 45px;
+}
+
+.Rectangle_4 ul {
+    margin : 8px 45px 36px 0;
+    padding: 0;
+}
+
+.Rectangle_4 li {
+
+    list-style-type: disc;
+}
+
+.Rectangle_4 h3 {
+    margin: 0;
+
 }
