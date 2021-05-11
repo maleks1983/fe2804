@@ -18,15 +18,20 @@
   }
 
   .central_panel {
-      flex-basis: 65%;
+      flex-basis: auto;
+      flex-shrink: 1;
+      flex-grow: 1;
       background: #FFFFFF;
+
 
   }
 
   .right_panel {
       position     : relative;
       align-content: flex-end;
+      flex-wrap    : wrap;
       flex-basis   : 35%;
+      max-width    : 802px;
       background   : rgba(42, 46, 65, 0.7);
   }
 
@@ -203,21 +208,19 @@
   }
 
 
-
-
   .categories>* {
-      position      : absolute;
-      width         : 285px;
-      height        : 80px;
+      position: absolute;
+      width   : 285px;
+      height  : 80px;
+      border-radius: 12px;
+      font-size  : 26px;
+      line-height: 30px;
+      color      : #FFFFFF;
+  }
+
+  .categories>*:not(:first-child) {
       text-align    : center;
       text-transform: uppercase;
-      display       : block;
-      border-radius : 12px;
-      text-align    : center;
-      box-sizing    : border-box;
-      font-size     : 26px;
-      line-height   : 30px;
-      color         : #FFFFFF;
   }
 
   .categories>p {
