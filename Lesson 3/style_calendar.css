@@ -1,0 +1,248 @@
+  @font-face {
+      font-family  : 'Roboto';
+      font-style   : normal;
+      font-weight  : 500;
+      font-display : swap;
+      src          : url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  .container {
+      width         : 2334px;
+      height        : 1796px;
+      display       : flex;
+      flex-direction: row;
+      font-family   : Roboto;
+      font-style    : normal;
+      font-weight   : 500;
+  }
+
+  .central_panel {
+      flex-basis: 65%;
+      background: #FFFFFF;
+
+  }
+
+  .right_panel {
+      position     : relative;
+      align-content: flex-end;
+      flex-basis   : 35%;
+      background   : rgba(42, 46, 65, 0.7);
+  }
+
+  .month {
+      position   : absolute;
+      top        : 84px;
+      left       : 238px;
+      color      : #FFFFFF;
+      font-size  : 36px;
+      line-height: 42px;
+      width      : 320px;
+      height     : 43px;
+      text-align : center;
+
+  }
+
+  .month::before {
+      left    : -121px;
+      position: absolute;
+      content : url('img/Shape_left.png');
+      width   : 18px;
+      height  : 36px;
+
+
+  }
+
+  .month::after {
+      right   : -122px;
+      position: absolute;
+      content : url('img/Shape_right.png');
+      width   : 18px;
+      height  : 36px;
+  }
+
+
+
+  .right_panel::before {
+      content : url('img/line.png');
+      position: absolute;
+      top     : 212px;
+      left    : 98px;
+  }
+
+  .right_panel::after {
+      content : url('img/line.png');
+      position: absolute;
+      top     : 1082px;
+      left    : 98px;
+  }
+
+  .header_days {
+      position      : absolute;
+      top           : 281px;
+      left          : 2px;
+      width         : 800px;
+      height        : 120px;
+      mix-blend-mode: normal;
+      opacity       : 0.6;
+
+  }
+
+  .day_name {
+      position  : absolute;
+      width     : 86px;
+      height    : 31px;
+      font-size : 26px;
+      color     : #FFFFFF;
+      text-align: center;
+  }
+
+
+
+  .day_name:nth-child(1) {
+      left: 101px;
+  }
+
+  .day_name:nth-child(2) {
+      left: 187px;
+  }
+
+  .day_name:nth-child(3) {
+      left: 272px;
+  }
+
+  .day_name:nth-child(4) {
+      left: 358px;
+  }
+
+  .day_name:nth-child(5) {
+      left: 443px;
+  }
+
+  .day_name:nth-child(6) {
+      left: 529px;
+  }
+
+  .day_name:nth-child(7) {
+      left: 614px;
+  }
+
+  .day {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+      width          : 86px;
+      height         : 34px;
+      position       : absolute;
+      font-size      : 29px;
+      line-height    : 34px;
+      color          : #FFFFFF;
+  }
+
+  .line {
+      position: absolute;
+  }
+
+  .day:nth-child(1) {
+      left: 99px;
+  }
+
+  .day:nth-child(2) {
+      left: 184px;
+  }
+
+  .day:nth-child(3) {
+      left: 270px;
+  }
+
+  .day:nth-child(4) {
+      left: 356px;
+  }
+
+  .day:nth-child(5) {
+      left: 442px;
+  }
+
+  .day:nth-child(6) {
+      left: 528px;
+  }
+
+  .day:nth-child(7) {
+      left: 614px;
+  }
+
+  [class="line"] {
+      top: 404px;
+  }
+
+  [class="line 2"] {
+      top: 534px;
+  }
+
+  [class="line 3"] {
+      top: 664px;
+  }
+
+  [class="line 4"] {
+      top: 794px;
+  }
+
+  [class="line 5"] {
+      top: 924px;
+  }
+
+
+  [class="line 3"] .day:nth-child(2),
+
+  [class="line 3"] .day:nth-child(1) {
+      top             : -23px;
+      width           : 80px;
+      height          : 80px;
+      border-radius   : 50%;
+      background-color: #3C82F9;
+  }
+
+
+
+
+  .categories>* {
+      position      : absolute;
+      width         : 285px;
+      height        : 80px;
+      text-align    : center;
+      text-transform: uppercase;
+      display       : block;
+      border-radius : 12px;
+      text-align    : center;
+      box-sizing    : border-box;
+      font-size     : 26px;
+      line-height   : 30px;
+      color         : #FFFFFF;
+  }
+
+  .categories>p {
+      top : 1191px;
+      left: 100px;
+  }
+
+  .finance {
+
+      top             : 1290px;
+      left            : 100px;
+      background-color: #8576ED;
+
+  }
+
+  .management {
+      left            : 413px;
+      top             : 1290px;
+      background-color: #F39946;
+  }
+
+  .design {
+
+      top             : 1400px;
+      left            : 100px;
+      background-color: #FF467E;
+
+  }
