@@ -200,13 +200,15 @@
   [class="line 3"] .day:nth-child(2),
 
   [class="line 3"] .day:nth-child(1) {
-      transform: translateY(23px);
+      transform: translateY(-23px);
       width           : 80px;
       height          : 80px;
       border-radius   : 50%;
       background-color: #3C82F9;
   }
-
+  [class="line 5"] .day:nth-child(n+4){
+    opacity       : 0.5;
+  }
 
   .categories>* {
       position: absolute;
