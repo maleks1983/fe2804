@@ -50,22 +50,30 @@
 
   }
 
-  .month::before {
+  .month .prev {
       left    : -121px;
       position: absolute;
-      content : url('img/Shape_left.png');
       width   : 18px;
       height  : 36px;
+      cursor  : pointer;
+
 
 
   }
 
-  .month::after {
+  .month .next {
       right   : -122px;
       position: absolute;
-      content : url('img/Shape_right.png');
       width   : 18px;
       height  : 36px;
+      cursor  : pointer;
+
+  }
+
+  .month .next:hover,
+  .month .prev:hover {
+      opacity: 0.6;
+
   }
 
 
@@ -120,6 +128,7 @@
       font-size : 26px;
       color     : #FFFFFF;
       text-align: center;
+      cursor    : default;
   }
 
 
@@ -153,16 +162,25 @@
   }
 
   .day {
+
       display        : flex;
       justify-content: center;
       align-items    : center;
       width          : 86px;
       height         : 34px;
       position       : absolute;
+
+  }
+
+  .day a {
       font-size      : 29px;
       line-height    : 34px;
       color          : #FFFFFF;
+      text-decoration: none;
+      text-align     : center;
+      cursor         : pointer;
   }
+  
 
   .line {
       position  : absolute;
@@ -219,19 +237,24 @@
   }
 
 
-  [class="line 3"] .day:nth-child(2),
+  [class="line 5"] .day:nth-child(n+3) {
+      opacity: 0.5;
+  }
 
-  [class="line 3"] .day:nth-child(1) {
-      transform       : translateY(-23px);
+  .day a:hover
+   {
+      display         : flex;
+      align-items     : center;
+      justify-content : center;
+      box-sizing      : content-box;
+      text-align      : center;
       width           : 80px;
       height          : 80px;
       border-radius   : 50%;
       background-color: #3C82F9;
+
   }
 
-  [class="line 5"] .day:nth-child(n+4) {
-      opacity: 0.5;
-  }
 
   .categories>* {
       display      : block;
@@ -255,6 +278,12 @@
       left: 100px;
   }
 
+  .categories button {
+      border       : 0;
+      border-radius: 0%;
+      cursor       : pointer;
+  }
+
   .finance {
 
       top             : 1290px;
@@ -276,3 +305,4 @@
       background-color: #FF467E;
 
   }
+
