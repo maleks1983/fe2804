@@ -200,7 +200,7 @@
   [class="line 3"] .day:nth-child(2),
 
   [class="line 3"] .day:nth-child(1) {
-      top             : -23px;
+      transform: translateY(23px);
       width           : 80px;
       height          : 80px;
       border-radius   : 50%;
