@@ -36,6 +36,8 @@
   }
 
   .month {
+      display    : block;
+      box-sizing : border-box;
       position   : relative;
       top        : 84px;
       left       : 238px;
@@ -93,7 +95,8 @@
       mix-blend-mode: normal;
       opacity       : 0.17;
   }
-  .days{
+
+  .days {
       position: relative;
   }
 
@@ -109,6 +112,8 @@
   }
 
   .day_name {
+      display   : block;
+      box-sizing: border-box;
       position  : absolute;
       width     : 86px;
       height    : 31px;
@@ -160,7 +165,9 @@
   }
 
   .line {
-      position: absolute;
+      position  : absolute;
+      display   : block;
+      box-sizing: border-box;
   }
 
   .day:nth-child(1) {
@@ -227,6 +234,8 @@
   }
 
   .categories>* {
+      display      : block;
+      box-sizing   : border-box;
       position     : absolute;
       width        : 285px;
       height       : 80px;
