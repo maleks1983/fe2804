@@ -18,10 +18,10 @@
   }
 
   .central_panel {
-      flex-basis: auto;
+      flex-basis : auto;
       flex-shrink: 1;
-      flex-grow: 1;
-      background: #FFFFFF;
+      flex-grow  : 1;
+      background : #FFFFFF;
 
 
   }
@@ -36,7 +36,7 @@
   }
 
   .month {
-      position   : absolute;
+      position   : relative;
       top        : 84px;
       left       : 238px;
       color      : #FFFFFF;
@@ -69,17 +69,32 @@
 
 
   .right_panel::before {
-      content : url('img/line.png');
+      content : '';
       position: absolute;
       top     : 212px;
       left    : 98px;
+      width   : 599px;
+      height  : 2px;
+
+      background    : #000000;
+      mix-blend-mode: normal;
+      opacity       : 0.17;
   }
 
   .right_panel::after {
-      content : url('img/line.png');
+      content : '';
       position: absolute;
       top     : 1082px;
       left    : 98px;
+      width   : 599px;
+      height  : 2px;
+
+      background    : #000000;
+      mix-blend-mode: normal;
+      opacity       : 0.17;
+  }
+  .days{
+      position: relative;
   }
 
   .header_days {
@@ -200,24 +215,25 @@
   [class="line 3"] .day:nth-child(2),
 
   [class="line 3"] .day:nth-child(1) {
-      transform: translateY(-23px);
+      transform       : translateY(-23px);
       width           : 80px;
       height          : 80px;
       border-radius   : 50%;
       background-color: #3C82F9;
   }
-  [class="line 5"] .day:nth-child(n+4){
-    opacity       : 0.5;
+
+  [class="line 5"] .day:nth-child(n+4) {
+      opacity: 0.5;
   }
 
   .categories>* {
-      position: absolute;
-      width   : 285px;
-      height  : 80px;
+      position     : absolute;
+      width        : 285px;
+      height       : 80px;
       border-radius: 12px;
-      font-size  : 26px;
-      line-height: 30px;
-      color      : #FFFFFF;
+      font-size    : 26px;
+      line-height  : 30px;
+      color        : #FFFFFF;
   }
 
   .categories>*:not(:first-child) {
