@@ -161,7 +161,6 @@
       left: 614px;
   }
 
-  .active,
   .day {
 
       display        : flex;
@@ -214,7 +213,7 @@
       left: 528px;
   }
 
-  .active,
+
   .day:nth-child(7) {
       left: 614px;
   }
@@ -244,22 +243,8 @@
       opacity: 0.5;
   }
 
-  .active a {
-      font-size      : 29px;
-      line-height    : 34px;
-      color          : #FFFFFF;
-      display         : flex;
-      align-items     : center;
-      justify-content : center;
-      box-sizing      : content-box;
-      text-align      : center;
-      width           : 80px;
-      height          : 80px;
-      border-radius   : 50%;
-      background-color: #3C82F9;
-  }
 
-  .day a:hover {
+  .active a, .day a:hover {
       display         : flex;
       align-items     : center;
       justify-content : center;
