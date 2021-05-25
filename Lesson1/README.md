@@ -1,39 +1,27 @@
-# Урок 1. Основы HTML и CSS
+# WebAcademy fe2804 Homework
 
-## Макет [Personas](https://maleks1983.github.io/fe2804/)
+## Уроки
 
-## Установить и настроить git
+* [Lesson 1](Lesson1/README.md)
 
-- [x] Установка Git под Windows
+## Простые макеты для тренировки верстки
 
-## Зарегистрироваться
+* [ThriveTalk](https://www.figma.com/file/ncfUi5NMZKAblmoavnUCNG/ThriveTalk-Landing-Page-(Copy))
+* [BuhOne](https://www.figma.com/file/H25MCLDxyXi2HeqjYcsxsR/Templates-%236.-More-on-Figma.info-(Copy))
+* [Denis Novik](https://www.figma.com/file/FFdUU4n0piY6LqljTbbpoz/Free--Landing--Page-Template-(Copy))
+* [Freebie_Coffee](https://www.figma.com/file/bINAYHzCvncjUfK1sZUeoa/Freebie_Coffee-(Copy))
+* [XBox](https://www.figma.com/file/xRLNPsBWtVJhquFMtAetil/xbox-(Copy)?node-id=0%3A1)
+* [Freebie-Agency](https://www.figma.com/file/D3p8WTN6kHmwcRUpDZ0JV6/Freebie-Agency-(Copy)?node-id=0%3A1)
+* [Partner with construct](https://www.figma.com/file/glY1xSNfKenXmrN1qnRRjX/konstruct-template-(Copy)?node-id=0%3A1)
+* [Hungry people](https://www.figma.com/file/Tb46tO8aemjV8ZdQflWg6A/Hunger---Website-Template-(Copy))
+* [Valorant](https://www.figma.com/file/LUpCCOtlAnhGb9L01l3ArI/Valorant---Agents-page-concept-design-(Community)-(Copy))
+* [Chat](https://www.figma.com/file/WsZSIIIhs9T3bQR3bGA0Nn/Chat-Desktop-App-macOS-(Copy))
+* [Increase your productivity](https://www.figma.com/file/2nC8dtRH5iVzZXxzNuJtZP/clean_and_simple_website_freebie_work_file-(Copy))
 
-- [x] Github
-- [x] Figma
-  
-## Установить NodeJS
+## Дополнительно
 
-- [x] NodeJS
-
-## Подготовить редактор кода
-
-- [x] Visual Studio Code
-
-- [x] Создать папку для домашних заданий и других работ на курсе
-- [x] Создать файл README.md
-- [x] Инициализировать git
-     git init
-- [x] Создать свой первый коммит
-    git add .
-    git commit -m "Initial"
-- [x] Создать на гитхабе репозиторий для удаленного хранения файлов Документация
-- [x] Установить связь локального репозитория с удаленным
-    git remote add origin [repository-url]
-    git branch -M main
-- [x] Скопируйте файлы из локального хранилища в удаленный репозиторий
-    git push -u origin main
-- [x] Создайте свой первый html-файл в папке и попытайтесь сверстать информацию о человеке
-    Макет: Personas
-- [x] Добавьте этот файл в гитхаб
-- [x] Попробуйте выложить его в Github-pages
-- [x] Добавьте информацию о своей первой странице в Readme и обновленную информацию в Github
+* [6 Creative Website Menu Design Examples You Need to Copy](https://www.lean-labs.com/blog/website-menu-design-examples)
+* [Шаблоны](https://figma.info/)
+* [Телеграмм канал с шаблонами](https://t.me/figma2html)
+* [Список тестовых заданий для прокачки](https://github.com/Hexlet/ru-test-assignments)
+* [Frontend Developer Interview Questions](https://h5bp.org/Front-end-Developer-Interview-Questions/)
