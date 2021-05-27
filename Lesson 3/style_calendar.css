@@ -6,70 +6,71 @@
       src          : url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
       unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
-  *{
-      box-sizing: border-box;
-  }
+
+
 
   .container {
-      width         : 2334px;
-      height        : 1796px;
-      display       : flex;
-      flex-direction: row;
-      font-family   : Roboto;
-      font-style    : normal;
-      font-weight   : 500;
+      min-height : 100vh;
+      box-sizing : border-box;
+      display    : flex;
+      align-items: stretch;
+      font-family: Roboto;
+      font-style : normal;
+      font-weight: 500;
+      max-width  : 2334px;
+      margin     : auto;
   }
 
   .central_panel {
-      flex-basis : auto;
-      flex-shrink: 1;
-      flex-grow  : 1;
-      background : #FFFFFF;
 
+      flex      : 1 1 0;
+      background: #FFFFFF;
 
   }
 
   .right_panel {
-      position     : relative;
-      align-content: flex-end;
-      flex-wrap    : wrap;
-      flex-basis   : 35%;
-      max-width    : 802px;
-      background   : rgba(42, 46, 65, 0.7);
+      position      : relative;
+      flex          : 0 0 34.28%;
+      background    : rgba(42, 46, 65, 0.7);
+      display       : flex;
+      flex-direction: column;
+  }
+
+  .calendar {
+      flex: 1 1 56%;
   }
 
   .month {
-      display    : block;
-      box-sizing : border-box;
-      position   : relative;
-      top        : 84px;
-      left       : 238px;
+      display        : flex;
+      position       : relative;
+      justify-content: space-between;
+      text-align     : center;
+
+  }
+
+  .month p {
       color      : #FFFFFF;
       font-size  : 36px;
       line-height: 42px;
-      width      : 320px;
-      height     : 43px;
-      text-align : center;
+      flex       : 1 1 0;
+      order      : 2;
 
   }
 
   .month .prev {
-      left    : -121px;
-      position: absolute;
-      width   : 18px;
-      height  : 36px;
-      cursor  : pointer;
+      width : 18px;
+      height: 36px;
+      cursor: pointer;
 
 
 
   }
 
   .month .next {
-      right   : -122px;
-      position: absolute;
-      width   : 18px;
-      height  : 36px;
-      cursor  : pointer;
+      width : 18px;
+      height: 36px;
+      cursor: pointer;
+      order : 3;
 
   }
 
@@ -247,7 +248,8 @@
   }
 
 
-  .active a, .day a:hover {
+  .active a,
+  .day a:hover {
       display         : flex;
       align-items     : center;
       justify-content : center;
@@ -260,6 +262,10 @@
 
   }
 
+  .categories {
+      flex: 1 1 44%;
+      position: relative;
+  }
 
 
   .categories>* {
