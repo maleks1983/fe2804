@@ -21,58 +21,65 @@
     <article class="Work_1_4_1">
         <h3>Work 1.4.1</h3>
         <p>Вывести в консоль числа от 1 до n, где n - это произвольное целое число большее 1.</p>
-        <lable class="lableStartNambers">First number:
-            <input placeholder="Get first number" type="number" pattern="[0-9]+" title="Only numbers"
-                style="margin-left: 18px;" value=''><br><br>
-        </lable>
-        <Label class="lableEndNambers">Second number:
-            <input placeholder="Get second number" type="number" pattern="[0-9]+" title="Only numbers" value=''><br><br>
-        </Label>
-        <lable class="resultOutputLable" hidden>Result:
-            <input type="text" style="margin-left: 60px;">
-        </lable>
+        <form>
+            <lable class="lableStartNambers">First number:
+                <input placeholder="Get first number" type="number" pattern="[0-9]+" title="Only numbers"
+                    style="margin-left: 18px;" value=''><br><br>
+            </lable>
+            <Label class="lableEndNambers">Second number:
+                <input placeholder="Get second number" type="number" pattern="[0-9]+" title="Only numbers"
+                    value=''><br><br>
+            </Label>
+            <lable class="resultOutputLable" hidden>Result:
+                <input type="text" style="margin-left: 60px;">
+            </lable>
+            <label class="lableResetNambers" hidden>
+                <input type="reset" value='Reset' onclick="getNumbersreset()">
+            </label>
+        </form>
         <button class="btnStart">
             <a onclick="inputNumberGetNumbers()">Start</a>
-        </button>
-        <button class="btnReset" hidden>
-            <a onclick="reset()">Reset</a>
         </button>
     </article>
     <article class="Work_1_4_2">
         <h3>Work 1.4.2</h3>
         <p>Вывести в консоль простые числа от 1 до n.</p>
-        <label class="lableEndNambers">Number:
-            <input placeholder="End number" type="number" pattern="[0-9]+" title="Only numbers"><br><br>
-        </label>
-        <lable class="ResultOutput" hidden>Result:
-            <input type="text" style="margin-left: 12px;">
-        </lable>
+        <form action="">
+            <label class="lableEndNambers">Number:
+                <input placeholder="End number" type="number" pattern="[0-9]+" title="Only numbers"><br><br>
+            </label>
+            <lable class="ResultOutput" hidden>Result:
+                <input type="text" style="margin-left: 12px;">
+            </lable>
+            <label class="lableResetNambers" hidden>
+                <input type="reset" value='Reset' onclick="isSimpleReset()">
+            </label>
+        </form>
         <button class="btnStart">
             <a onclick="inputNumberIsSimple()">Start</a>
-        </button>
-        <button class="btnReset" hidden>
-            <a onclick="numberIsSimpleReset()">Reset</a>
         </button>
     </article>
 
     <article class="Work_1_4_3">
         <h3>Work 1.4.3</h3>
         <p>Вывести в консоль числа кратные k, в диапазоне от 1 до n. => in home</p>
-        <label class="lableEndNambers">End number:
-            <input placeholder="End number" type="number" pattern="[0-9]+" title="Only numbers"
-                style="margin-left: 33px;"><br><br>
-        </label>
-        <label class="lableMultipleNambers">Multiple Number:
-            <input placeholder="Get multiple number" type="number" pattern="[0-9]+" title="Only numbers"><br><br>
-        </label>
-        <lable class="ResultOutput" hidden>Result:
-            <input type="text" style="margin-left: 72px;">
-        </lable>
+        <form action="">
+            <label class="lableEndNambers">End number:
+                <input placeholder="End number" type="number" pattern="[0-9]+" title="Only numbers"
+                    style="margin-left: 33px;"><br><br>
+            </label>
+            <label class="lableMultipleNambers">Multiple Number:
+                <input placeholder="Get multiple number" type="number" pattern="[0-9]+" title="Only numbers"><br><br>
+            </label>
+            <lable class="ResultOutput" hidden>Result:
+                <input type="text" style="margin-left: 72px;">
+            </lable>
+            <label class="lableResetNambers" hidden>
+                <input type="reset" value='Reset' onclick="multipleReset()">
+            </label>
+        </form>
         <button class="btnStart">
             <a onclick="getMultiplesNumbers()">Start</a>
-        </button>
-        <button class="btnReset" hidden>
-            <a onclick="multipleReset()">Reset</a>
         </button>
     </article>
 
@@ -88,18 +95,19 @@
             // Входит 3й человек, количество рукопожатий 6
             // Каждый, кто входит в комнату с n людей делает n рукопожатий
         </pre>
-
-        <label class="lableHandshakeNambers">Number of handshakes:
-            <input placeholder="handshakes" type="number" pattern="[0-9]+" title="Only numbers"><br><br>
-        </label>
-        <lable class="ResultOutput" hidden>Result:
-            <input type="text" style="margin-left: 105px;">
-        </lable>
+        <form action="">
+            <label class="lableHandshakeNambers">Number of handshakes:
+                <input placeholder="handshakes" type="number" pattern="[0-9]+" title="Only numbers"><br><br>
+            </label>
+            <lable class="ResultOutput" hidden>Result:
+                <input type="text" style="margin-left: 105px;">
+            </lable>
+            <label class="lableResetNambers" hidden>
+                <input type="reset" value='Reset' onclick="handshakesReset()">
+            </label>
+        </form>
         <button class="btnStart">
             <a onclick="getPeople()">Start</a>
-        </button>
-        <button class="btnReset" hidden>
-            <a onclick="handshakesReset()">Reset</a>
         </button>
     </article>
 </body>
