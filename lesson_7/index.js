@@ -35,16 +35,15 @@ function inputNumberGetNumbers() {
     from = Number(inpetLable[0].children[0].value);
     to = Number(inpetLable[1].children[0].value);
     const result = getNumbers(from, to).join(', ');
-    getNumbersClass[3].hidden = true;
+    inpetLable[4].hidden = true;
     inpetLable[2].hidden = false;
     inpetLable[2].children[0].value = result;
-    inpetLable[2].children[0].style.width = result.length * 6 + 'px';
     inpetLable[3].hidden = false;
 }
 function getNumbersreset() {
     const getNumbersClass = document.getElementsByClassName("Work_1_4_1")[0].children;
     const inpetLable  = getNumbersClass[2].children;
-    getNumbersClass[3].hidden = false;
+    inpetLable[4].hidden = false;
     inpetLable[2].hidden = true;
     inpetLable[3].hidden = true;
 }
@@ -53,16 +52,17 @@ function inputNumberIsSimple() {
     const el = document.getElementsByClassName("Work_1_4_2")[0].children;
     const inpetLable  = el[2].children;
     to = Number(inpetLable[0].children[0].value);
-    el[3].hidden = true;
+    inpetLable[3].hidden = true;
     inpetLable[1].hidden = false;
     inpetLable[1].children[0].value = isSimple(to).join(", ")
     inpetLable[2].hidden = false;
 
 }
+
 function isSimpleReset() {
     const el = document.getElementsByClassName("Work_1_4_2")[0].children;
     const inpetLable  = el[2].children;
-    el[3].hidden = false;
+    inpetLable[3].hidden = false;
     inpetLable[1].hidden = true;
     inpetLable[2].hidden = true;
 }
@@ -79,10 +79,9 @@ function getMultiplesNumbers() {
             result.push(i);
         }
     }
-    el[3].hidden = true;
+    inpetLable[4].hidden = true;
     inpetLable[2].hidden = false;
     inpetLable[2].children[0].value = result.join(", ");
-    inpetLable[2].children[0].style.width = inpetLable[2].children[0].value.length * 6 + 'px';
     inpetLable[3].hidden = false;
 }
 
@@ -90,7 +89,7 @@ function multipleReset() {
     const el = document.getElementsByClassName("Work_1_4_3")[0].children;
     const inputLable  = el[2].children;
     inputLable[2].hidden = true;
-    el[3].hidden = false;
+    inputLable[4].hidden = false;
     inputLable[3].hidden = true;
 }
 
@@ -105,7 +104,7 @@ function getPeople(handshakes) {
         totalPeople++;
         handshake += totalPeople;
     }
-    el[3].hidden = true;
+    inputLable[3].hidden = true;
     inputLable[1].hidden = false;
     inputLable[1].children[0].value = totalPeople;
     inputLable[2].hidden = false;
@@ -114,7 +113,7 @@ function handshakesReset() {
     const el = document.getElementsByClassName("Work_3")[0].children;
     const inputLable  = el[2].children;
     inputLable[1].hidden = true;
-    el[4].hidden = false;
+    inputLable[3].hidden = false;
     inputLable[2].hidden = true;
 }
     

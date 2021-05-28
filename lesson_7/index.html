@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>HW7</h1>
+        <h2>Work 1.4</h2>
+        <p>
+            В первых трех задачах добавить пользователю возможность ввести значения переменных.
+        </p>
+    </header>
+    <main>
+        <article class="Work_1_4_1">
+            <h3>Work 1.4.1</h3>
+            <p>Вывести в консоль числа от 1 до n, где n - это произвольное целое число большее 1.</p>
+            <form>
+                <lable class="lableStartNambers">First number:
+                    <input placeholder="Get first number" type="number" pattern="[0-9]+" title="Only numbers">
+                </lable>
+                <lable class="lableEndNambers">Second number:
+                    <input placeholder="Get second number" type="number" pattern="[0-9]+" title="Only numbers">
+                </lable>
+                <lable class="resultOutputLable" hidden>Result:
+                    <input type="text">
+                </lable>
+                <button type="reset" onclick="getNumbersreset()" hidden>Reset</button>
+                <button type="button" class="btnStart" onclick="inputNumberGetNumbers()">
+                    Start
+                </button>
+            </form>
+        </article>
+        <article class="Work_1_4_2">
+            <h3>Work 1.4.2</h3>
+            <p>Вывести в консоль простые числа от 1 до n.</p>
+            <form action="">
+                <lable class="lableEndNambers">Number:
+                    <input placeholder="End number" type="number" pattern="[0-9]+" title="Only numbers">
+                </lable>
+                <lable class="resultOutputLable" hidden>Result:
+                    <input type="text">
+                </lable>
+                <button type="reset" value='Reset' onclick="isSimpleReset()" hidden>Reset</button>
+                <button type="button" class="btnStart" onclick="inputNumberIsSimple()">Start</button>
+            </form>
+        </article>
+
+        <article class="Work_1_4_3">
+            <h3>Work 1.4.3</h3>
+            <p>Вывести в консоль числа кратные k, в диапазоне от 1 до n. => in home</p>
+            <form action="">
+                <lable class="lableStartNambers">End number:
+                    <input placeholder="End number" type="number" pattern="[0-9]+" title="Only numbers">
+                </lable>
+                <lable class="lableEndNambers">Multiple Number:
+                    <input placeholder="Get multiple number" type="number" pattern="[0-9]+" title="Only numbers">
+                </lable>
+                <lable class="resultOutputLable" hidden>Result:
+                    <input type="text">
+                </lable>
+                <button type="reset" value='Reset' onclick="multipleReset()" hidden>Reset</button>
+                <button type="button" class="btnStart" onclick="getMultiplesNumbers()">Start</button>
+            </form>
+        </article>
+
+        <article class="Work_3">
+            <h3>Work 3</h3>
+            <pre>
+// Начальник цеха пригласил людей на совещание
+// Каждый, кто входит в кабинет пожимает руки всем присутствующим
+// Сколько человек зашло в кабинет, если известно, что всего произошло 120 рукопожатий.
+// Начальник цеха в комнате
+// Входит 1й человек, количество рукопожатий 1
+// Входит 2й человек, количество рукопожатий 3
+// Входит 3й человек, количество рукопожатий 6
+// Каждый, кто входит в комнату с n людей делает n рукопожатий
+            </pre>
+            <form action="">
+                <lable class="lableHandshakeNambers">Number of handshakes:
+                    <input placeholder="handshakes" type="number" pattern="[0-9]+" title="Only numbers">
+                </lable>
+                <lable class="resultOutputLable" hidden>Result:
+                    <input type="text">
+                </lable>
+                <button type="reset" value='Reset' onclick="handshakesReset()" hidden>Reset</button>
+                <button type="button" class="btnStart" onclick="getPeople()">Start</button>
+            </form>
+
+        </article>
+    </main>
+
+</body>
+
+</html>
