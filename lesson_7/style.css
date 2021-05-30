@@ -26,7 +26,7 @@ form {
     flex-wrap: wrap;
 }
 
-form lable:first-child {
+form lablel:first-child {
     flex: 0 0 35%;
 }
 
