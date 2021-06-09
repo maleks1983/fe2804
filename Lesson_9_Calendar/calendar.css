@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    margin     : 0;
+    box-sizing : border-box;
+    font-family: Roboto;
+    font-style : normal;
+    font-weight: 500;
+
+}
+
+menu {
+    padding        : 0;
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    height         : 1795px;
+
+}
+
+ul {
+    padding: 0;
+    margin : 0;
+}
+
+.planner {
+    flex          : 0 3 1535px;
+    display       : flex;
+    flex-direction: column;
+
+}
+
+.planner_hader {
+    flex           : 0 0 133px;
+    border-bottom  : 2px solid #F3F3F3;
+    margin         : 83px 138px 102px 142px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.planner_day {
+    font-size: 36px;
+}
+
+.searchPanel button {
+    margin          : 0;
+    border          : 0;
+    padding         : 0;
+    background-color: transparent;
+}
+
+.searchPanel button:first-child {
+    margin-right: 52px;
+}
+
+.planner_menu {
+    flex           : 0 0 1381px;
+    margin         : 0 10.137% 96px 10.137%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+}
+
+.planner-menu-time {
+    position : relative;
+    font-size: 26px;
+    color    : #A4B0C3;
+}
+
+.planner-menu-time::before {
+    content   : '';
+    position  : absolute;
+    top       : 50%;
+    right     : 0;
+    width     : 89.243%;
+    height    : 2px;
+    background: #F3F3F3;
+    flex      : 0 0 31px;
+
+}
+
+
+.calendar {
+    background : rgba(42, 46, 65, 0.7);
+    margin-left: -1px;
+    flex       : 0 1 800px;
+    color      : #FFFFFF;
+    font-size  : 26px;
+}
+
+.calendar_haeder {
+    height       : 56.044%;
+    margin-bottom: 6.908%;
+}
+
+.month {
+    position       : relative;
+    height         : 214px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.month::before {
+    content   : '';
+    position  : absolute;
+    top       : 100%;
+    width     : 74.875%;
+    height    : 2px;
+    background: #ffffff;
+    opacity   : 0.17;
+
+
+}
+
+.month::after {
+    content   : '';
+    position  : absolute;
+    bottom    : 0;
+    width     : 74.875%;
+    height    : 2px;
+    background: #000000;
+    opacity   : 0.17;
+
+
+}
+
+.month button {
+    flex            : 0 0 18px;
+    background-color: transparent;
+    border          : 0;
+    margin          : 0;
+    padding         : 0;
+
+}
+
+.month button svg {
+
+    width          : 18px;
+    height         : 36px;
+    fill           : none;
+    stroke         : white;
+    stroke-width   : 2px;
+    stroke-linecap : round;
+    stroke-linejoin: round;
+    width          : 100%;
+    cursor         : pointer;
+}
+
+.manth_name {
+    position    : relative;
+    flex        : 0 0 40%;
+    text-align  : center;
+    margin-left : 15.25%;
+    margin-right: 15.25%;
+    align-items : center;
+}
+
+
+.manth_name input {
+    top     : 25%;
+    left    : 21%;
+    margin  : 32.370 0 32.370 0;
+    position: absolute;
+    display : block;
+    width   : 60%;
+    height  : 35%;
+}
+
+.daysName {
+    position       : relative;
+    height         : 120px;
+    margin-bottom  : 2px;
+    justify-content: center;
+    align-items    : center;
+}
+
+
+
+.daysName ul {
+    height         : 130px;
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items    : center;
+    list-style     : none;
+}
+
+.daysName li {
+    flex      : 0 0 10.75%;
+    max-width : 86px;
+    max-height: 31px;
+    opacity   : 0.6;
+    text-align: center;
+    cursor    : default;
+
+}
+
+.daysNumber {
+
+    display       : flex;
+    flex-direction: column;
+}
+
+.daysNumber ul {
+    flex           : 0 0 130px;
+    list-style     : none;
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items    : center;
+
+}
+
+.number_day {
+    flex      : 0 0 10.75%;
+    max-width : 86px;
+    text-align: center;
+    cursor    : pointer;
+}
+
+.daysNumber li:hover,
+.number_day--active {
+    display         : flex;
+    background-color: #3C82F9;
+    width           : 80px;
+    height          : 80px;
+    border-radius   : 50%;
+    justify-content : center;
+    align-items     : center;
+
+}
+
+div .notActive {
+    opacity: 0.5;
+    cursor : default;
+}
+
+.category {
+    position      : relative;
+    display       : flex;
+    flex-direction: column;
+    height        : 372px;
+    align-items   : center;
+
+}
+
+.category p {
+    width     : 74.875%;
+    margin-top: 13.561%;
+    font-size : 26px;
+
+}
+
+.category::before {
+    content   : '';
+    top       : 2px;
+    position  : absolute;
+    width     : 100%;
+    height    : 2px;
+    background: #ffffff;
+    opacity   : 0.17;
+    width     : 74.875%;
+
+}
+
+.category::after {
+    content   : '';
+    position  : absolute;
+    top       : 0;
+    width     : 100%;
+    height    : 2px;
+    background: #000000;
+    opacity   : 0.17;
+    width     : 74.875%;
+}
+
+.category_btn {
+    width          : 74.875%;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+    align-items    : flex-end;
+
+}
+
+.category_btn button {
+    box-sizing   : border-box;
+    flex         : 0 0 47.579%;
+    height       : 80px;
+    margin-top   : 30px;
+    border-radius: 12px;
+    font-size    : 22px;
+    color        : currentColor;
+
+}
+
+.category_btn--finance {
+    background: #8576ED;
+}
+
+.category_btn--management {
+    background: #F39946;
+}
+
+.category_btn--desing {
+    background: #FF467E;
+}
