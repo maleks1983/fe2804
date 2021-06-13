@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <link rel="stylesheet" href="calendar.css">
-    <script src="calendar.js" defer></script>
+    <script src="calendar.js" type="text/javascript" defer></script>
+    <script src="data.json" type="text/javascript"></script>
 
 </head>
 
 <body>
+    <div class="beckground"></div>
     <menu>
         <div class="planner">
             <div class="planner_hader">
@@ -49,7 +51,7 @@
         <div class="calendar">
             <div class="calendar_haeder">
                 <div class="month">
-                    <button class="prev" onclick="changeMonthDown(this)" type="button">
+                    <button class="prev" onclick="changeMonth(this)" type="button">
                         <svg viewBox="0 0 20 38">
                             <path d="M19 1L1 19L19 37" />
                         </svg>
@@ -58,7 +60,7 @@
                         <p>
                         </p>
                     </div>
-                    <button class="next" onclick="changeMonthDown(this)" type="button">
+                    <button class="next" onclick="changeMonth(this)" type="button">
                         <svg viewBox="0 0 20 38">
                             <path d="M1 1L19 19L1 37" />
                         </svg>
@@ -83,20 +85,53 @@
                     Your categories
                 </p>
                 <div class="category_btn">
-                    <button class="category_btn--finance">
+                    <button class="category_color--finance" onclick="newPlanner(this)" value='finance'>
                         FINANCE
                     </button>
-                    <button class="category_btn--management">
+                    <button class="category_color--management" onclick="newPlanner(this)" value='management'>
                         MANAGEMENT
                     </button>
-                    <button class="category_btn--desing" >
+                    <button class="category_color--desing" onclick="newPlanner(this)" value='desing'>
                         DESIGN
                     </button>
 
                 </div>
             </div>
+        </div>
 
-
+        <div class="newWork">
+            <svg class="close-btn button--ok" onclick="">
+                <g class="layer">
+                    <title>close</title>
+                    <line fill="none" id="svg_1" x1="0" x2="30" y1="0" y2="30" />
+                    <line fill="none" id="svg_2" x1="30" x2="0" y1="0" y2="30" />
+                </g>
+            </svg>
+            <form class="newPlanerForm animate" name="category" value='' action="#"
+                onsubmit="addNewPlannerInList(this,event)">
+                <p class="newPlanerForm-title"></p>
+                <lable class="newPlanner-Lable--time"> Start time
+                    <input class="newPlanner-Lable--Starttime" type="time" name="startTime" value="09:00" min="09:00"
+                        max="20:00" required>
+                </lable>
+                <lable class="newPlanner-Lable--time"> End time
+                    <input class="newPlanner-Lable--Endtime" type="time" name="endTime" value="09:00" min="09:00"
+                        max="20:00" required>
+                </lable>
+                <lable class="newPlanner-Lable--description">Description
+                    <textarea name="description"></textarea>
+                </lable>
+                <div class="newPlanner-Lable--button">
+                    <button class="button--ok" type="submit" value="Ok" onclick="">
+                        Ok
+                    </button>
+                </div>
+                <div class="newPlanner-Lable--button">
+                    <button type="reset" value="Reset">
+                        Reset
+                    </button>
+                </div>
+            </form>
         </div>
     </menu>
 </body>

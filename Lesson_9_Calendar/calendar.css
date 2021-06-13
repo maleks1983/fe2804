@@ -1,21 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 body {
-    margin     : 0;
-    box-sizing : border-box;
-    font-family: Roboto;
-    font-style : normal;
-    font-weight: 500;
+
+    display        : flex;
+    justify-content: center;
+    box-sizing     : border-box;
+    font-family    : Roboto;
+    font-style     : normal;
+    font-weight    : 500;
+
 
 }
 
+.beckground {
+    display         : none;
+    position        : absolute;
+    width           : 100%;
+    height          : 100%;
+    background-color: #000000;
+    z-index         : 2;
+    opacity         : 0.5;
+}
+
+
 menu {
+    flex           : 1 1 100%;
+    position       : relative;
     padding        : 0;
     display        : flex;
     flex-direction : row;
     justify-content: center;
-    height         : 1795px;
+    max-width      : 2334px;
+}
 
+.close-btn {
+    stroke-width   : 5px;
+    width          : 30px;
+    height         : 30px;
+    stroke         : #F3F3F3;;
+    stroke-linecap : round;
+    stroke-width   : 5px;
+    stroke-linejoin: round;
+    fill           : none;
+    position       : absolute;
+    right: 3%;
+    top: 3%;
 }
 
 ul {
@@ -61,13 +90,14 @@ ul {
     justify-content: space-between;
 }
 
-.planner-menu-time {
-    position : relative;
-    font-size: 26px;
-    color    : #A4B0C3;
+.planner-menu--time {
+    align-items: flex-end;
+    position   : relative;
+    font-size  : 26px;
+    color      : #A4B0C3;
 }
 
-.planner-menu-time::before {
+.planner-menu--time::before {
     content   : '';
     position  : absolute;
     top       : 50%;
@@ -79,6 +109,38 @@ ul {
 
 }
 
+.planner-menu--work {
+    display    : flex;
+    align-items: center;
+    width      : 89.243%;
+    right      : 0;
+    top        : 50%;
+    height     : 120px;
+    position   : absolute;
+}
+
+.planner-menu--work p {
+    margin-left: 5.9821%;
+    color      : #243D6F;
+    font-size  : 28px;
+    z-index    : 1;
+}
+
+.planner-menu--finance {
+    background : rgba(61, 131, 249, 0.15);
+    border-left: 6px solid #3D83F9;
+}
+
+.planner-menu--management {
+    background : rgba(238, 165, 124, 0.15);
+    border-left: 6px solid #EEA57C;
+
+}
+
+.planner-menu--desing {
+    background : rgba(133, 118, 237, 0.15);
+    border-left: 6px solid #8576ED;
+}
 
 .calendar {
     background : rgba(42, 46, 65, 0.7);
@@ -89,7 +151,7 @@ ul {
 }
 
 .calendar_haeder {
-    height       : 56.044%;
+    height       : auto;
     margin-bottom: 6.908%;
 }
 
@@ -135,7 +197,6 @@ ul {
 }
 
 .month button svg {
-
     width          : 18px;
     height         : 36px;
     fill           : none;
@@ -219,7 +280,7 @@ ul {
     cursor    : pointer;
 }
 
-.daysNumber li:hover,
+.number_day:not(.notActive):hover,
 .number_day--active {
     display         : flex;
     background-color: #3C82F9;
@@ -230,6 +291,8 @@ ul {
     align-items     : center;
 
 }
+
+
 
 div .notActive {
     opacity: 0.5;
@@ -295,14 +358,132 @@ div .notActive {
 
 }
 
-.category_btn--finance {
+.category_color--finance {
     background: #8576ED;
 }
 
-.category_btn--management {
+.category_color--management {
     background: #F39946;
 }
 
-.category_btn--desing {
+.category_color--desing {
     background: #FF467E;
+}
+
+.newWork {
+    display      : none;
+    position     : absolute;
+    top          : 20%;
+    width        : 50%;
+    height       : 650px;
+    z-index      : 10;
+    border-radius: 12px;
+    font-size    : 22px;
+    box-shadow   : 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.newWork input,
+.newWork button,
+textarea {
+    font-size: 22px;
+    color    : currentColor;
+
+}
+
+.newWork form {
+    height               : 100%;
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows   : 0.3fr, repeat(3, 1fr);
+    grid-row-gap         : 1em;
+    grid-column-gap      : 1em;
+
+}
+
+.newPlanerForm p {
+    grid-row-start   : 1;
+    grid-column-start: 1;
+    grid-column-end  : 3;
+    text-align       : center;
+    font-size        : 26px;
+    margin-top       : 5%;
+}
+
+.newPlanner-Lable--time {
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: space-around;
+}
+
+.newPlanner-Lable--time input {
+    width : 50%;
+    height: 30%;
+}
+
+.newPlanner-Lable--description {
+    grid-row-start   : 3;
+    grid-row-end     : 4;
+    grid-column-start: 1;
+    grid-column-end  : 3;
+    display          : flex;
+    justify-content  : space-around;
+}
+
+.newPlanner-Lable--description textarea {
+    width  : 70%;
+    height : 100%;
+    padding: 1%;
+}
+
+.newPlanner-Lable--button {
+    display        : flex;
+    justify-content: center;
+}
+
+.newPlanner-Lable--button:nth-child(0) {
+    grid-row-start   : 4;
+    grid-column-start: 1;
+
+}
+
+.newPlanner-Lable--button:nth-child(1) {
+    grid-row-start   : 4;
+    grid-column-start: 2;
+
+}
+
+.newPlanner-Lable--button button {
+    height          : 80px;
+    width           : 60%;
+    margin-top      : 30px;
+    border-radius   : 12px;
+    background-color: #ffffff;
+}
+
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation        : animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
