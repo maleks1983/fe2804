@@ -32,8 +32,15 @@ menu {
     justify-content: center;
     max-width      : 2334px;
 }
+.close-btn{
+    position       : absolute;
+    right: 3%;
+    top: 3%; 
+    background-color: transparent;
+    border: 0;
+}
 
-.close-btn {
+.img-btn {
     stroke-width   : 5px;
     width          : 30px;
     height         : 30px;
@@ -42,9 +49,7 @@ menu {
     stroke-width   : 5px;
     stroke-linejoin: round;
     fill           : none;
-    position       : absolute;
-    right: 3%;
-    top: 3%;
+   
 }
 
 ul {
@@ -281,7 +286,8 @@ ul {
 }
 
 .number_day:not(.notActive):hover,
-.number_day--active {
+.number_day--active,
+.planner_day--planner {
     display         : flex;
     background-color: #3C82F9;
     width           : 80px;

@@ -6,11 +6,12 @@ const PLANNERLIST = {
 };
 
 function calendar() {
-    let date = new Date();
     const monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    this.activeDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    this.activeDate = new Date();
     this.activeElement = [];
-    this.plannerDay = new Date(activeDate.getFullYear(), activeDate.getMonth(), activeDate.getDate());
+    this.plannerDay = function () {
+        return new Date(this.activeDate.getFullYear(), this.activeDate.getMonth(), this.activeDate.getDate());
+    };
 
     function clearnode(nodeNme) {
         let myNode = document.getElementsByClassName(nodeNme)[0];
@@ -35,11 +36,15 @@ function calendar() {
     }
 
     this.drawScheduleByDay = function (element) {
-        this.activeElement.className = 'number_day';
+        const b = this.activeElement.className.includes('planner_day--planner');
+        this.activeElement.className.includes('planner_day--planner') ? this.activeElement.className = 'number_day planner_day--planner' :
+            this.activeElement.className = 'number_day';
         this.activeElement = element;
-        this.activeElement.className += ' number_day--active'
+        this.activeElement.className.includes('planner_day--planner') ?
+            this.activeElement.className = 'number_day planner_day--planner number_day--active' :
+            this.activeElement.className = 'number_day number_day--active'
         this.activeDate.setDate(element.textContent);
-        drawSchedule();
+        this.drawSchedule();
 
     }
 
@@ -71,30 +76,32 @@ function calendar() {
 
     }
 
-
     this.draw = function () {
-        const lastDayInMonth = function firstNumberDayInWeek(day) {
-            this.lastDayInMonth = new Date(this.activeDate);
-            this.lastDayInMonth.setDate(day);
-            return this.lastDayInMonth;
+        const lastDayInMonth = function (day) {
+            let lastDayInMonth = new Date(this.activeDate.getFullYear(), this.activeDate.getMonth() + 1, 0);
+            lastDayInMonth.setDate(day);
+            return lastDayInMonth;
         };
         const div = document.querySelector(".daysNumber");
         document.querySelector(".manth_name p").textContent = `${monthList[this.activeDate.getMonth()]} ${this.activeDate.getFullYear()}`;
-        for (let line = 1, day = 1 - lastDayInMonth(0).getDay(); line < 7; line++) {
+        for (let line = 1, day = (1 - lastDayInMonth.call(this, 0).getDay()); line < 7; line++) {
             let ul = document.createElement('ul');
             for (let d = 1; d <= 7; d++, day++) {
                 let li = document.createElement('li');
                 li.className = 'number_day';
-                li.textContent = lastDayInMonth(day).getDate();
-                let drawDays = lastDayInMonth(day);
+                let drawDays = lastDayInMonth.call(this, day);
+                li.textContent = drawDays.getDate();
+
                 if (drawDays.getMonth() === this.activeDate.getMonth()) {
-                    li.setAttribute('onclick', 'drawScheduleByDay(this)');
+                    li.setAttribute('onclick', 'calendar.drawScheduleByDay(this)');
                 }
                 else {
                     li.className += ' notActive';
                 }
-                if (drawDays.toDateString() === this.activeDate.toDateString() ||
-                    typeof (PLANNERLIST[(new Date(activeDate.getFullYear(), activeDate.getMonth(), day).toDateString())]) != 'undefined') {
+                if (typeof (PLANNERLIST[(new Date(this.activeDate.getFullYear(), this.activeDate.getMonth(), day).toDateString())]) != 'undefined') {
+                    li.className += ' planner_day--planner'
+                }
+                if (drawDays.toDateString() === this.activeDate.toDateString()) {
                     li.className += ' number_day--active'
                     this.activeElement = li;
                 }
@@ -120,6 +127,7 @@ function calendar() {
     }
 
     this.addNewPlannerInList = function (element, event) {
+        const planerDay = this.plannerDay.call(this).toDateString();
         event.preventDefault();
         let plannerListTimeStart = new Date(
             this.activeDate.getFullYear(),
@@ -135,9 +143,8 @@ function calendar() {
             element['endTime'].value.split(':')[0],
             element['endTime'].value.split(':')[1],
         )
-        console.log(PLANNERLIST[plannerDay.toDateString()]);
-        if (typeof (PLANNERLIST[plannerDay.toDateString()]) != 'undefined') {
-            PLANNERLIST[plannerDay.toDateString()].push({
+        if (typeof (PLANNERLIST[planerDay]) != 'undefined') {
+            PLANNERLIST[planerDay].push({
                 'startTime': plannerListTimeStart,
                 'endTime': plannerListTimeEnd,
                 'category': element.value,
@@ -145,7 +152,7 @@ function calendar() {
             });
         }
         else {
-            PLANNERLIST[plannerDay.toDateString()] = [{
+            PLANNERLIST[planerDay] = [{
                 'startTime': plannerListTimeStart,
                 'endTime': plannerListTimeEnd,
                 'category': element.value,
@@ -153,21 +160,15 @@ function calendar() {
             }];
 
         }
+        this.activeElement.className = 'number_day planner_day--planner';
         this.drawSchedule();
     }
-
+    this.closeWindows = function () {
+        document.querySelector(".beckground").style.display = 'none';
+        document.querySelector(".newWork").style.display = 'none';
+    }
 
     this.draw();
 
 }
-
-
-document.body.onload = calendar();
-
-window.onclick = function (event) {
-    if (event.target == document.querySelector(".button--ok")) {
-        document.querySelector(".beckground").style.display = 'none';
-        document.querySelector(".newWork").style.display = 'none';
-
-    }
-}
+this.calendar = new calendar();
