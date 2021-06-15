@@ -160,7 +160,7 @@ function calendar() {
             }];
 
         }
-        this.activeElement.className = 'number_day planner_day--plannet number_day--active';
+        this.activeElement.className = 'number_day planner_day--planner';
         this.drawSchedule();
     }
     this.closeWindows = function () {
