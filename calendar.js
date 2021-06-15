@@ -36,12 +36,12 @@ function calendar() {
     }
 
     this.drawScheduleByDay = function (element) {
-        const b = this.activeElement.className.includes('planner_day--plannet');
-        this.activeElement.className.includes('planner_day--plannet') ? this.activeElement.className = 'number_day planner_day--plannet' :
+        const b = this.activeElement.className.includes('planner_day--planner');
+        this.activeElement.className.includes('planner_day--planner') ? this.activeElement.className = 'number_day planner_day--planner' :
             this.activeElement.className = 'number_day';
         this.activeElement = element;
-        this.activeElement.className.includes('planner_day--plannet') ?
-            this.activeElement.className = 'number_day planner_day--plannet number_day--active' :
+        this.activeElement.className.includes('planner_day--planner') ?
+            this.activeElement.className = 'number_day planner_day--planner number_day--active' :
             this.activeElement.className = 'number_day number_day--active'
         this.activeDate.setDate(element.textContent);
         this.drawSchedule();
@@ -99,7 +99,7 @@ function calendar() {
                     li.className += ' notActive';
                 }
                 if (typeof (PLANNERLIST[(new Date(this.activeDate.getFullYear(), this.activeDate.getMonth(), day).toDateString())]) != 'undefined') {
-                    li.className += ' planner_day--plannet'
+                    li.className += ' planner_day--planner'
                 }
                 if (drawDays.toDateString() === this.activeDate.toDateString()) {
                     li.className += ' number_day--active'
